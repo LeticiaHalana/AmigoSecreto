@@ -40,6 +40,9 @@ Este projeto é uma aplicação simples para sortear um "amigo secreto" a partir
 4. Repetir o sorteio (opcional)
   - Caso queira refazer o sorteio, basta repetir o processo.
 
+## Link do projeto 🤖
+[Amigo secreto]( https://leticiahalana.github.io/AmigoSecreto/)
+
 ## 📩 Contato
 ![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)
 
