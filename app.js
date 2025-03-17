@@ -1,5 +1,10 @@
 let listaDeAmigos = [];
 let buttonAdd = document.querySelector(".button-add");
+let desabilitarBotao = document.getElementById("reiniciar");
+
+desabilitarBotao.disabled = true;
+desabilitarBotao.classList.add("button-desabled");
+desabilitarBotao.classList.remove("button-draw");
 
 function adicionarAmigo() {
   let nomeAmigo = document.querySelector(".input-name").value;
@@ -34,7 +39,23 @@ function sortearAmigo() {
     let resultado = document.getElementById("resultado");
 
     resultado.innerHTML = `O(A) amigo(a) sorteado(a) é: ${sorteado}!🎉 `;
+    desabilitarBotao.disabled = false;
+    desabilitarBotao.classList.add("button-draw");
+    desabilitarBotao.classList.remove("button-desabled");
+    desabilitarBotao.style.display = "flex";
+    desabilitarBotao.style.justifyContent = "center";
   } else if (listaDeAmigos.length < 2) {
     alert("Por favor, adicione mais amigos para sortear.");
   }
+}
+
+function reiniciarSorteio() {
+  let resultado = document.getElementById("resultado");
+  resultado.textContent = "";
+  listaDeAmigos = [];
+  desabilitarBotao.disabled = true;
+  desabilitarBotao.classList.add("button-desabled");
+  desabilitarBotao.classList.remove("button-draw");
+  atualizarListaDeAmigos();
+  alert("Novo sorteio!");
 }
