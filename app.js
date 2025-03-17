@@ -26,3 +26,15 @@ function atualizarListaDeAmigos() {
     renderListaDeAmigos.appendChild(list);
   }
 }
+
+function sortearAmigo() {
+  if (listaDeAmigos.length !== 0 && listaDeAmigos.length > 1) {
+    let sorteado =
+      listaDeAmigos[Math.floor(Math.random() * listaDeAmigos.length)];
+    let resultado = document.getElementById("resultado");
+
+    resultado.innerHTML = `O(A) amigo(a) sorteado(a) é: ${sorteado}!🎉 `;
+  } else if (listaDeAmigos.length < 2) {
+    alert("Por favor, adicione mais amigos para sortear.");
+  }
+}
